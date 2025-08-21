@@ -1,0 +1,334 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL ACCESS</title>
+    
+    <style>
+        /*
+         * Main Neocities Style
+         * Cursor is a custom SVG "star" that matches the aesthetic.
+         */
+        @font-face {
+            font-family: 'PixelEmulator';
+            src: url('https://fonts.cdnfonts.com/s/72221/PressStart2P-Regular.woff') format('woff');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            color: #0f0;
+            font-family: 'PixelEmulator', monospace;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='%2300ff00' d='M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z'/%3E%3C/svg%3E") 12 12, auto;
+        }
+
+        /* Video Background */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: grayscale(100%) brightness(0.8);
+        }
+
+        /* Container to hold all content */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Overlay for readability */
+        }
+        
+        /* Chaotic placement of the main content box - borders removed */
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .title h1 {
+            font-size: 2rem;
+            text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; transform: translate(0, 0); }
+            25% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; transform: translate(2px, -2px); }
+            50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; transform: translate(-2px, 2px); }
+            75% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; transform: translate(2px, 2px); }
+            100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; transform: translate(0, 0); }
+        }
+
+        /* Hello Kitty sticker - borders and shadows removed */
+        .kitty-sticker {
+            margin: 20px auto;
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .kitty-sticker:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .kitty-sticker video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            background-color: #000;
+            border: 1px solid #0f0;
+            color: #0f0;
+            font-family: 'PixelEmulator', monospace;
+            padding: 5px;
+            font-size: 1em;
+            margin-top: 10px;
+            width: calc(100% - 12px);
+        }
+        
+        .enter-button {
+            background-color: #00ff00;
+            border: 1px solid #000;
+            color: #000;
+            font-family: 'PixelEmulator', monospace;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .enter-button:hover {
+            background-color: #ff00ff;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Blinking text for an even more retro feel */
+        .blinking-text {
+            animation: blinker 1s infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <video id="bgVideo" autoplay loop muted onerror="console.error('Failed to load background video. Check the file path and file permissions.');">
+        <source src="working/index/bong.mp4" type="video/mp4">
+        <div style="padding: 20px; color: red; text-align: center;">Error: Background video file not found or corrupted.</div>
+    </video>
+
+    <div class="container">
+        <div class="content-box">
+            <div class="title">
+                <h1>
+                    <span class="blinking-text">ACCESS DENIED</span>
+                </h1>
+            </div>
+            <div class="kitty-sticker">
+                <video autoplay loop muted>
+                    <source src="working/index/hellokitie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>ENTER PASSWORD:</p>
+            <input type="password" id="passwordInput">
+            <button class="enter-button" onclick="checkPassword()">&#60;ENTER&#62;</button>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const correctPassword = 'retro2024';
+            if (password === correctPassword) {
+                window.location.href = 'main.html';
+            } else {
+                alert('ACCESS DENIED. TRY AGAIN.');
+            }
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL ACCESS</title>
+    
+    <style>
+        /*
+         * Main Neocities Style
+         * Cursor is a custom SVG "star" that matches the aesthetic.
+         */
+        @font-face {
+            font-family: 'PixelEmulator';
+            src: url('https://fonts.cdnfonts.com/s/72221/PressStart2P-Regular.woff') format('woff');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            color: #0f0;
+            font-family: 'PixelEmulator', monospace;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='%2300ff00' d='M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z'/%3E%3C/svg%3E") 12 12, auto;
+        }
+
+        /* Video Background */
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: grayscale(100%) brightness(0.8);
+        }
+
+        /* Container to hold all content */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Overlay for readability */
+        }
+        
+        /* Chaotic placement of the main content box - borders removed */
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .title h1 {
+            font-size: 2rem;
+            text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; transform: translate(0, 0); }
+            25% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; transform: translate(2px, -2px); }
+            50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; transform: translate(-2px, 2px); }
+            75% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; transform: translate(2px, 2px); }
+            100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; transform: translate(0, 0); }
+        }
+
+        /* Hello Kitty sticker - borders and shadows removed */
+        .kitty-sticker {
+            margin: 20px auto;
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .kitty-sticker:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .kitty-sticker video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            background-color: #000;
+            border: 1px solid #0f0;
+            color: #0f0;
+            font-family: 'PixelEmulator', monospace;
+            padding: 5px;
+            font-size: 1em;
+            margin-top: 10px;
+            width: calc(100% - 12px);
+        }
+        
+        .enter-button {
+            background-color: #00ff00;
+            border: 1px solid #000;
+            color: #000;
+            font-family: 'PixelEmulator', monospace;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .enter-button:hover {
+            background-color: #ff00ff;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Blinking text for an even more retro feel */
+        .blinking-text {
+            animation: blinker 1s infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <video id="bgVideo" autoplay loop muted onerror="console.error('Failed to load background video. Check the file path and file permissions.');">
+        <source src="working/index/bong.mp4" type="video/mp4">
+        <div style="padding: 20px; color: red; text-align: center;">Error: Background video file not found or corrupted.</div>
+    </video>
+
+    <div class="container">
+        <div class="content-box">
+            <div class="title">
+                <h1>
+                    <span class="blinking-text">ACCESS DENIED</span>
+                </h1>
+            </div>
+            <div class="kitty-sticker">
+                <video autoplay loop muted>
+                    <source src="working/index/hellokitie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>ENTER PASSWORD:</p>
+            <input type="password" id="passwordInput">
+            <button class="enter-button" onclick="checkPassword()">&#60;ENTER&#62;</button>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const correctPassword = 'retro2024';
+            if (password === correctPassword) {
+                window.location.href = 'main.html';
+            } else {
+                alert('ACCESS DENIED. TRY AGAIN.');
+            }
+        }
+    </script>
+</body>
+</html>
