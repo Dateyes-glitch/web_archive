@@ -257,9 +257,6 @@ docker-compose build --no-cache
 docker ps -a
 ```
 
-## 📄 License
-
-MIT License - see LICENSE file for details
 
 ## 🤝 Contributing
 
